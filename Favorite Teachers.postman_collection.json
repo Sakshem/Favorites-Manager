@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "2da5b7f3-d516-49b3-92d9-bd1048e761ea",
+		"name": "Favorite Teachers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19335144"
+	},
+	"item": [
+		{
+			"name": "Register New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"johndoe@gmail.com\",\r\n    \"password\": \"test123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				},
+				"description": "This API can be used to add new student"
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"johndoe@gmail.com\",\r\n    \"password\": \"test123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				},
+				"description": "This API can be used to login and returns JWT Token which can be used as Bearer Token for rest of the APIs."
+			},
+			"response": []
+		},
+		{
+			"name": "Teachers ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzVkMjllMDEwZDgzZWMyNzM1OWNmM2QiLCJpYXQiOjE2NjcwNDk5OTd9.5NWhh7TjqAtLN-sSlFRkWOXTeVFThb5hIT-xoVErUUE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/teachers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"teachers",
+						""
+					]
+				},
+				"description": "This API is used to get list of all the teachers"
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Teacher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzVkMjllMDEwZDgzZWMyNzM1OWNmM2QiLCJpYXQiOjE2NjcwNDk5OTd9.5NWhh7TjqAtLN-sSlFRkWOXTeVFThb5hIT-xoVErUUE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"William Zane\",\r\n    \"email\": \"williamzane@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/teachers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"teachers",
+						""
+					]
+				},
+				"description": "This API adds new teacher by adding JWT token in the header from successfully logging in as a user/student"
+			},
+			"response": []
+		},
+		{
+			"name": "Teacher by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzVkMjllMDEwZDgzZWMyNzM1OWNmM2QiLCJpYXQiOjE2NjcwNDk5OTd9.5NWhh7TjqAtLN-sSlFRkWOXTeVFThb5hIT-xoVErUUE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/teachers/635d2ed210d83ec27359cf42",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"teachers",
+						"635d2ed210d83ec27359cf42"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "This API can be used to get teacher info by passing it's id"
+			},
+			"response": []
+		},
+		{
+			"name": "Teacher by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzVkMjllMDEwZDgzZWMyNzM1OWNmM2QiLCJpYXQiOjE2NjcwNDk5OTd9.5NWhh7TjqAtLN-sSlFRkWOXTeVFThb5hIT-xoVErUUE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/teachers/635d2ed210d83ec27359cf42",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"teachers",
+						"635d2ed210d83ec27359cf42"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "This API can be used to delete teacher info by passing it's id"
+			},
+			"response": []
+		},
+		{
+			"name": "Teacher by Id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzVkMjllMDEwZDgzZWMyNzM1OWNmM2QiLCJpYXQiOjE2NjcwNDk5OTd9.5NWhh7TjqAtLN-sSlFRkWOXTeVFThb5hIT-xoVErUUE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/teachers/635d2ed210d83ec27359cf42",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"teachers",
+						"635d2ed210d83ec27359cf42"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "This API can be used to update teacher info by passing it's id"
+			},
+			"response": []
+		},
+		{
+			"name": "Favorite Teacher",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzVjZDE5YmYwODAzYWNhN2VjOWZhYTkiLCJpYXQiOjE2NjcwMjczNzB9.jEQdEGU7BTgZhqEVotHkdu6aZw37r0fIWuvdN2MMgN4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/teachers/favorite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"teachers",
+						"favorite"
+					]
+				},
+				"description": "This API is used to get the list of all the favorite teachers marked by the user/student"
+			},
+			"response": []
+		},
+		{
+			"name": "Favorite Teacher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzVkMjllMDEwZDgzZWMyNzM1OWNmM2QiLCJpYXQiOjE2NjcwNDk5OTd9.5NWhh7TjqAtLN-sSlFRkWOXTeVFThb5hIT-xoVErUUE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/teachers/favorite/635be09be3e6d5cffe0ae8fd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"teachers",
+						"favorite",
+						"635be09be3e6d5cffe0ae8fd"
+					]
+				},
+				"description": "This API is used to add a teacher to favorite list by the user/student"
+			},
+			"response": []
+		},
+		{
+			"name": "Favorite Teacher",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzVkMjllMDEwZDgzZWMyNzM1OWNmM2QiLCJpYXQiOjE2NjcwNDk5OTd9.5NWhh7TjqAtLN-sSlFRkWOXTeVFThb5hIT-xoVErUUE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/teachers/favorite/635be09be3e6d5cffe0ae8fd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"teachers",
+						"favorite",
+						"635be09be3e6d5cffe0ae8fd"
+					]
+				},
+				"description": "This API is used to remove the teacher from favorite list by the user/student"
+			},
+			"response": []
+		},
+		{
+			"name": "Most Favorite",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzVjZDE5YmYwODAzYWNhN2VjOWZhYTkiLCJpYXQiOjE2NjcwMjczNzB9.jEQdEGU7BTgZhqEVotHkdu6aZw37r0fIWuvdN2MMgN4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/teachers/mostFavorite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"teachers",
+						"mostFavorite"
+					]
+				},
+				"description": "This API is used to get the most favorite teacher among all the students/user and it also returns the count of students who marked them their favorite"
+			},
+			"response": []
+		}
+	]
+}
