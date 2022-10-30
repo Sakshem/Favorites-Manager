@@ -21,15 +21,15 @@ Edit the dotenv file in the main repository to connect to the database on cloud.
 
 ## Database Information
 This project includes three collections in the database and they are as follows-
-* Users
+* **Users**
 ![image](https://user-images.githubusercontent.com/61968230/198859402-4e7dd3a3-9438-48f5-8b88-4a67db464ac4.png)
 
 
-* Teachers
+* **Teachers**
 ![image](https://user-images.githubusercontent.com/61968230/198859430-85fa8ac8-0341-4b8e-aece-49b5b1d978dd.png)
 
 
-* Favorite Teachers
+* **Favorite Teachers**
 ![image](https://user-images.githubusercontent.com/61968230/198859608-4dff9453-1591-470b-9821-d2f8cd999475.png)
 
 
