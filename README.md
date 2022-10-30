@@ -59,10 +59,10 @@ This API can be used to login and returns JWT Token which can be used as Bearer 
 
 **Body**
 ```
-  {
-    "email": "johndoe@gmail.com",
-    "password": "test123"
-  }
+{
+  "email": "johndoe@gmail.com",
+  "password": "test123"
+}
 ```
 
 ### 3) ***GET*** Teachers
@@ -78,10 +78,10 @@ This API adds new teacher by adding JWT token in the header from successfully lo
 
 **Body**
 ```
-  {
-    "name": "William Zane",
-    "email": "williamzane@gmail.com"
-  }
+{
+  "name": "William Zane",
+  "email": "williamzane@gmail.com"
+}
 ```
 
 ### 5) ***GET*** Teacher By Id
@@ -102,10 +102,10 @@ This API can be used to update teacher info by passing it's id
 
 **Body**
 ```
-  {
-      "name": "William Zane",
-      "email": "williamzane36@gmail.com"
-  }
+{
+  "name": "William Zane",
+  "email": "williamzane36@gmail.com"
+}
  ```
 
 ### 8) ***GET*** Favorite Teacher
