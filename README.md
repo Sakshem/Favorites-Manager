@@ -53,7 +53,7 @@ This project includes three collections in the database and they are as follows-
   ```
 
 ### 2) ***POST*** Login User
-```http://localhost:3000/api/user/register```
+```http://localhost:3000/api/user/login```
 
 This API can be used to login and returns JWT Token which can be used as Bearer Token for rest of the APIs.
 
